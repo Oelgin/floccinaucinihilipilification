@@ -1,4 +1,3 @@
 # floccinaucinihilipilification
 UUzkaan
-I-bars
-+aybala 
+I-bars 
