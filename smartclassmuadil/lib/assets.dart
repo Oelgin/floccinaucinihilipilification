@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 
 //Asset 1
-class AcilogoAsset extends StatelessWidget {
+class BackgroundAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = new AssetImage('assets/images/FormResource.png');
+    AssetImage assetImage = new AssetImage('images/background.png');
     Image image = Image(image: assetImage);
     return Container(
       child: image,
@@ -13,10 +13,10 @@ class AcilogoAsset extends StatelessWidget {
   }
 }
 //Asset 2
-class AcilogoAsset extends StatelessWidget {
+class HelpIconAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = new AssetImage('assets/images/FormResource.png');
+    AssetImage assetImage = new AssetImage('images/icons8Help48.png');
     Image image = Image(image: assetImage);
     return Container(
       child: image,
@@ -24,10 +24,10 @@ class AcilogoAsset extends StatelessWidget {
   }
 }
 //Asset 3
-class AcilogoAsset extends StatelessWidget {
+class LockIconAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = new AssetImage('assets/images/FormResource.png');
+    AssetImage assetImage = new AssetImage('images/icons8Lock48.png');
     Image image = Image(image: assetImage);
     return Container(
       child: image,
@@ -35,10 +35,10 @@ class AcilogoAsset extends StatelessWidget {
   }
 }
 //Asset 4
-class AcilogoAsset extends StatelessWidget {
+class LoginBoxAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = new AssetImage('assets/images/FormResource.png');
+    AssetImage assetImage = new AssetImage('images/loginbox.png');
     Image image = Image(image: assetImage);
     return Container(
       child: image,
@@ -46,10 +46,10 @@ class AcilogoAsset extends StatelessWidget {
   }
 }
 //Asset 5
-class AcilogoAsset extends StatelessWidget {
+class LoginButtonAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = new AssetImage('assets/images/FormResource.png');
+    AssetImage assetImage = new AssetImage('images/loginbutton.png');
     Image image = Image(image: assetImage);
     return Container(
       child: image,
@@ -57,10 +57,10 @@ class AcilogoAsset extends StatelessWidget {
   }
 }
 //Asset 6
-class AcilogoAsset extends StatelessWidget {
+class PRIconAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = new AssetImage('assets/images/FormResource.png');
+    AssetImage assetImage = new AssetImage('images/mustrerihizmetleri.png');
     Image image = Image(image: assetImage);
     return Container(
       child: image,
@@ -68,10 +68,10 @@ class AcilogoAsset extends StatelessWidget {
   }
 }
 //Asset 7
-class AcilogoAsset extends StatelessWidget {
+class ZameGriAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = new AssetImage('assets/images/FormResource.png');
+    AssetImage assetImage = new AssetImage('images/zamegri.png');
     Image image = Image(image: assetImage);
     return Container(
       child: image,
@@ -79,10 +79,10 @@ class AcilogoAsset extends StatelessWidget {
   }
 }
 //Asset 8
-class AcilogoAsset extends StatelessWidget {
+class ZameLogoAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = new AssetImage('assets/images/FormResource.png');
+    AssetImage assetImage = new AssetImage('images/zamelogo.png');
     Image image = Image(image: assetImage);
     return Container(
       child: image,
@@ -90,10 +90,10 @@ class AcilogoAsset extends StatelessWidget {
   }
 }
 //Asset 9
-class AcilogoAsset extends StatelessWidget {
+class ZameColorAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = new AssetImage('assets/images/FormResource.png');
+    AssetImage assetImage = new AssetImage('images/zamerenkliyazi.png');
     Image image = Image(image: assetImage);
     return Container(
       child: image,
