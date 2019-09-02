@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartclassmuadil/HomePage.dart';
 import 'assets.dart';
+import 'dart:async';
 
 void main() => runApp(MyApp());
 
@@ -8,12 +9,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Power Class',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Power Class Zame Demo'),
-    );
+        title: 'Power Class',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: MyHomePage(title: 'Power Class Zame Demo'),
+        routes: {
+          '/second': (context) => SecondScreen(),
+        });
   }
 }
 
@@ -24,7 +27,13 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+const String username = "kcankaya";
+const String password = "kaan123kaan";
+
 class _MyHomePageState extends State<MyHomePage> {
+  var _opacity = 0.0;
+  final usernameCont = new TextEditingController();
+  final passCont = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,28 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: ZameColorAsset(),
                 ),
                 // loginbutton
-                Positioned(
-                  top: 465.7,
-                  left: 75,
-                  width: 279.6666666666667,
-                  height: 36,
-                  child: ButtonTheme(
-                      minWidth: 200,
-                      height: 36,
-                      child: RaisedButton(
-                        onPressed: () {
-                          Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => FirstScreen()),
-                        );
-                        },
-                        child: Text("Login",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                            )),
-                      )),
-                ),
+
                 // zamelogo
                 Positioned(
                   bottom: 13.3,
@@ -135,6 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 13.666666666666666,
                   child: ZameGriAsset(),
                 ),
+                //Username
                 Positioned(
                   top: 340,
                   left: 82.3,
@@ -142,6 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 250,
                       height: 25,
                       child: TextField(
+                          controller: usernameCont,
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Username",
@@ -168,6 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 250,
                       height: 25,
                       child: TextField(
+                          controller: passCont,
                           obscureText: true,
                           decoration: InputDecoration(
                             border: InputBorder.none,
@@ -186,6 +177,51 @@ class _MyHomePageState extends State<MyHomePage> {
                               fontStyle: FontStyle.normal,
                               fontSize: 17.5),
                           textAlign: TextAlign.left)),
+                ),
+                PositionedDirectional(
+                    top: 267,
+                    start: 126,
+                    child: SizedBox(
+                      width: 175.33333333333334,
+                      height: 100,
+                      child: AnimatedOpacity(
+                          duration: Duration(milliseconds: 10),
+                          opacity: _opacity,
+                          child: Text(
+                              "KULLANICI ADINI VEYA ŞİFREYİ\nYANLIŞ GİRDİNİZ!\nTEKRAR DENEYİNİZ.",
+                              style: const TextStyle(
+                                  color: const Color(0xffff0000),
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily: "Futura",
+                                  fontStyle: FontStyle.normal,
+                                  fontSize: 10.3),
+                              textAlign: TextAlign.center)),
+                    )),
+                Positioned(
+                  top: 465.7,
+                  left: 75,
+                  width: 279.6666666666667,
+                  height: 36,
+                  child: ButtonTheme(
+                      minWidth: 200,
+                      height: 36,
+                      child: RaisedButton(
+                        onPressed: () {
+                          if (username == usernameCont.text &&
+                              password == passCont.text) {
+                            Navigator.pushNamed(context, '/second');
+                          } else {
+                            setState(() {
+                              _opacity = _opacity == 0.0 ? 1.0 : 0.0;
+                            });
+                          }
+                        },
+                        child: Text("Login",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            )),
+                      )),
                 ),
               ]))),
       // This trailing comma makes auto-formatting nicer for build methods.
