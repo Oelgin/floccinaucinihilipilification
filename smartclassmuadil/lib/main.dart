@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:smartclassmuadil/HomePage.dart';
+import 'package:fix/HomePage.dart';
 import 'assets.dart';
-import 'dart:async';
 
 void main() => runApp(MyApp());
 
@@ -9,14 +8,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Power Class',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: MyHomePage(title: 'Power Class Zame Demo'),
-        routes: {
+      title: 'Power Class',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+      routes: {
+          '/home': (context) => MyHomePage(),
           '/second': (context) => SecondScreen(),
-        });
+
+        }
+    );
   }
 }
 
@@ -26,20 +28,21 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
-
 const String username = "kcankaya";
 const String password = "kaan123kaan";
 
 class _MyHomePageState extends State<MyHomePage> {
-  var _opacity = 0.0;
+    var _opacity = 0.0;
   final usernameCont = new TextEditingController();
   final passCont = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
-      ),
+        title: Text("Login",
+          style: TextStyle(fontFamily: "Futura",
+                                  fontStyle: FontStyle.normal,),
+      )),
       body: Center(
           child: Container(
               width: 414,
@@ -68,7 +71,51 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: ZameColorAsset(),
                 ),
                 // loginbutton
-
+                Positioned(
+                  top: 465.7,
+                  left: 75,
+                  width: 279.6666666666667,
+                  height: 36,
+                  child: ButtonTheme(
+                      minWidth: 200,
+                      height: 36,
+                      child: RaisedButton(
+                        onPressed: () {
+                          if (username == usernameCont.text &&
+                              password == passCont.text) {
+                             Navigator.pushReplacementNamed(context, '/second');
+                          } else {
+                            setState(() {
+                              _opacity = _opacity == 0.0 ? 1.0 : 0.0;
+                            });
+                          }
+                        },
+                        child: Text("Login",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            )),
+                      )),
+                ),
+                PositionedDirectional(
+                    top: 267,
+                    start: 126,
+                    child: SizedBox(
+                      width: 175.33333333333334,
+                      height: 100,
+                      child: AnimatedOpacity(
+                          duration: Duration(milliseconds: 10),
+                          opacity: _opacity,
+                          child: Text(
+                              "KULLANICI ADINI VEYA ŞİFREYİ\nYANLIŞ GİRDİNİZ!\nTEKRAR DENEYİNİZ.",
+                              style: const TextStyle(
+                                  color: const Color(0xffff0000),
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily: "Futura",
+                                  fontStyle: FontStyle.normal,
+                                  fontSize: 10.3),
+                              textAlign: TextAlign.center)),
+                    )),
                 // zamelogo
                 Positioned(
                   bottom: 13.3,
@@ -79,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 // mustrerihizmetleri
                 Positioned(
-                    bottom: 18,
+                    bottom: 18 - MediaQuery.of(context).viewInsets.bottom,
                     right: 99,
                     width: 29,
                     height: 32.333333333333336,
@@ -91,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 // icons8-help-48
                 Positioned(
-                  bottom: 19.7,
+                  bottom: 19.7 - MediaQuery.of(context).viewInsets.bottom,
                   right: 33.3,
                   width: 27.666666666666668,
                   height: 27.666666666666668,
@@ -104,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 // icons8-lock-48
                 Positioned(
-                  bottom: 20,
+                  bottom: 20 - MediaQuery.of(context).viewInsets.bottom,
                   right: 69,
                   width: 23.333333333333332,
                   height: 28.666666666666668,
@@ -123,7 +170,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 13.666666666666666,
                   child: ZameGriAsset(),
                 ),
-                //Username
                 Positioned(
                   top: 340,
                   left: 82.3,
@@ -152,7 +198,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 //password
                 PositionedDirectional(
-                  bottom: 235,
+                  bottom: 235 + MediaQuery.of(context).viewInsets.bottom,
                   start: 84,
                   child: SizedBox(
                       width: 250,
@@ -177,51 +223,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               fontStyle: FontStyle.normal,
                               fontSize: 17.5),
                           textAlign: TextAlign.left)),
-                ),
-                PositionedDirectional(
-                    top: 267,
-                    start: 126,
-                    child: SizedBox(
-                      width: 175.33333333333334,
-                      height: 100,
-                      child: AnimatedOpacity(
-                          duration: Duration(milliseconds: 10),
-                          opacity: _opacity,
-                          child: Text(
-                              "KULLANICI ADINI VEYA ŞİFREYİ\nYANLIŞ GİRDİNİZ!\nTEKRAR DENEYİNİZ.",
-                              style: const TextStyle(
-                                  color: const Color(0xffff0000),
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily: "Futura",
-                                  fontStyle: FontStyle.normal,
-                                  fontSize: 10.3),
-                              textAlign: TextAlign.center)),
-                    )),
-                Positioned(
-                  top: 465.7,
-                  left: 75,
-                  width: 279.6666666666667,
-                  height: 36,
-                  child: ButtonTheme(
-                      minWidth: 200,
-                      height: 36,
-                      child: RaisedButton(
-                        onPressed: () {
-                          if (username == usernameCont.text &&
-                              password == passCont.text) {
-                            Navigator.pushNamed(context, '/second');
-                          } else {
-                            setState(() {
-                              _opacity = _opacity == 0.0 ? 1.0 : 0.0;
-                            });
-                          }
-                        },
-                        child: Text("Login",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                            )),
-                      )),
                 ),
               ]))),
       // This trailing comma makes auto-formatting nicer for build methods.
