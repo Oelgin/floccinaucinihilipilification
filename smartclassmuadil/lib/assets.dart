@@ -100,3 +100,36 @@ class ZameColorAsset extends StatelessWidget {
     );
   }
 }
+//Asset 10
+class AnnouncementAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/announcements.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
+//Asset 11
+class AttendanceInfoAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/attendanceinfo.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
+//Asset 12
+class ClassesInfoAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/classesinfo.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
