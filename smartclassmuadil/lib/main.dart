@@ -1,3 +1,4 @@
+import 'package:fix/evodevleri.dart';
 import 'package:fix/feedbackbox.dart';
 import 'package:flutter/material.dart';
 import 'package:fix/HomePage.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
           '/home': (context) => MyHomePage(),
           '/second': (context) => SecondScreen(),
           '/feedback': (context) => FeedbackBox(),
+          '/homeworks': (context) => Homeworks(),
 
         }
     );
