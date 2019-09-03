@@ -51,7 +51,17 @@ flutter:
    - images/zamegri.png
    - images/zamelogo.png
    - images/zamerenkliyazi.png
-
+   - images/announcements.png
+   - images/attendanceinfo.png
+   - images/classesinfo.png
+   - images/fastmenu.png
+   - images/grades.png
+   - images/homeworkbox.png
+   - images/mealinfo.png
+   - images/refreshicon.png
+   - images/studentphoto.png
+   - images/infobox.png
+   - images/text.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

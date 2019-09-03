@@ -133,3 +133,85 @@ class ClassesInfoAsset extends StatelessWidget {
     );
   }
 }
+//Asset 13
+class MealInfoAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/mealinfo.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
+//Asset 14
+class StudentPhotoAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/studentphoto.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+//Asset 15
+}class RefreshIconAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/refreshicon.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+//Asset 16
+}class HomeWorkBoxAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/homeworkbox.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+//Asset 17
+}class GradesAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/grades.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+//Asset 18
+}class FastMenuAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/fastmenu.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+//Asset 19
+}class InfoBoxAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/infobox.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+//Asset 20
+}class PCTextAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/text.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}

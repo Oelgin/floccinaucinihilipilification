@@ -1,3 +1,4 @@
+import 'package:fix/assets.dart';
 import 'package:flutter/material.dart';
 import 'main.dart';
 
@@ -31,74 +32,113 @@ class _SecondScreenState extends State<SecondScreen> {
             // background
             child: Container(
                 width: 414,
-                height: 1337,
+                height: 1400,
                 decoration: new BoxDecoration(
-                image: DecorationImage(
-                  image: new AssetImage('images/background.png'),
-                  fit: BoxFit.fill,
+                  image: DecorationImage(
+                    image: new AssetImage('images/background.png'),
+                    fit: BoxFit.fill,
+                  ),
                 ),
-              ),
                 child: Stack(children: [
                   // mealinfo
-                  PositionedDirectional(
-                    top: 1825,
-                    start: 97,
-                    child: Container(
-                        width: 353.6666666666667, height: 283.6666666666667),
+                  Positioned(
+                    top: 608.3,
+                    left: 32.3,
+                    width: 353.6666666666667, 
+                    height: 283.7,
+                    child: MealInfoAsset(),   
                   ),
                   // classesinfo
-                  PositionedDirectional(
-                    top: 2754,
-                    start: 93,
-                    child: Container(width: 356.6666666666667, height: 207),
+                  Positioned(
+                    top: 918,
+                    left: 31,
+                    width: 356.6666666666667, 
+                    height: 207,
+                    child: ClassesInfoAsset(),
                   ),
                   // attendanceinfo
-                  PositionedDirectional(
-                    top: 3375,
-                    start: 94,
-                    child: Container(width: 356.6666666666667, height: 189),
+                  Positioned(
+                    top: 1125,
+                    left: 31.3,
+                    width: 356.6666666666667, 
+                    height: 189,
+                    child: AttendanceInfoAsset(),
                   ),
                   // grades
-                  PositionedDirectional(
-                    top: 1343,
-                    start: 91,
-                    child: Container(
-                        width: 356.6666666666667, height: 141.66666666666666),
+                  Positioned(
+                    top: 447.7,
+                    left: 30.3,
+                    width: 356.6666666666667, 
+                    height: 141.66666666666666,
+                    child: GradesAsset(),
                   ),
                   // homeworkbox
-                  PositionedDirectional(
-                    top: 380,
-                    start: 86,
-                    child: Container(
-                        width: 356.6666666666667, height: 141.66666666666666),
+                  Positioned(
+                    top: 126.7,
+                    left: 28.7,
+                    width: 356.6666666666667, 
+                    height: 141.66666666666666,
+                    child: HomeWorkBoxAsset(),
                   ),
                   // announcements
-                  PositionedDirectional(
-                    top: 859,
-                    start: 86,
-                    child: Container(
-                        width: 356.6666666666667, height: 141.66666666666666),
+                  Positioned(
+                    top: 286.3,
+                    left: 28.7,
+                    width: 356.6666666666667, 
+                    height: 141.66666666666666,
+                    child: AnnouncementAsset(),
                   ),
                   // infobox
-                  PositionedDirectional(
-                    top: 34,
-                    start: 206,
-                    child: Container(
-                        width: 180.33333333333334, height: 90.33333333333333),
+                  Positioned(
+                    top: 11.3,
+                    left: 68.7,
+                    width: 180.33333333333334, 
+                    height: 90.33333333333333,
+                    child: InfoBoxAsset(),
                   ),
                   // fastmenu
-                  PositionedDirectional(
-                    top: 35,
-                    start: 759,
-                    child: Container(width: 134, height: 90),
+                  Positioned(
+                    top: 11.7,
+                    right: 27,
+                    width: 134, 
+                    height: 90,
+                    child: FastMenuAsset(
+                    ) ,
                   ),
                   // studentphoto
-                  PositionedDirectional(
-                    top: 35,
-                    start: 77,
-                    child: Container(
-                        width: 90.66666666666667, height: 89.66666666666667),
+                  Positioned(
+                    top: 11.7,
+                    left: 25.7,
+                    width: 90.66666666666667, 
+                    height: 89.66666666666667,
+                    child: StudentPhotoAsset(),
                   ),
+                  // zamelogo
+                  Positioned(
+                    bottom: 20,
+                    left: 31,
+                    width: 31.666666666666668,
+                    height: 35.666666666666664,
+                    child: ZameLogoAsset(),
+                  ),
+                  // powerclass text
+                  Positioned(
+                    bottom: 0,
+                    left: 80,
+                    width: 150,
+                    height: 75,
+                    child: PCTextAsset(), 
+                  ),
+                  // fastmenu iconbuttons
+                  Positioned(
+                    top:15,
+                    right: 20,
+                    child: IconButton(
+                    icon: Icon(Icons.access_alarm),
+                    onPressed: (){
+                      print("dsadsa");
+                    },),
+                  ),               
                   // refresh/replcaewithicon kopya 2
                   PositionedDirectional(
                     top: 1340,
@@ -143,11 +183,11 @@ class _SecondScreenState extends State<SecondScreen> {
                   ),
                   // incompleted 3
                   PositionedDirectional(
-                    top: 694,
-                    start: 205,
+                    top: 168.3,
+                    start: 67,
                     child: SizedBox(
                         width: 55.666666666666664,
-                        height: 5.666666666666667,
+                        height: 10,
                         child: Text("tamamlanmadı",
                             style: const TextStyle(
                                 color: const Color(0xffff0000),
@@ -159,11 +199,11 @@ class _SecondScreenState extends State<SecondScreen> {
                   ),
                   // incompleted1
                   PositionedDirectional(
-                    top: 505,
-                    start: 201,
+                    top: 198.7,
+                    start: 67,
                     child: SizedBox(
                         width: 55.666666666666664,
-                        height: 5.666666666666667,
+                        height: 10,
                         child: Text("tamamlanmadı",
                             style: const TextStyle(
                                 color: const Color(0xffff0000),
@@ -175,11 +215,11 @@ class _SecondScreenState extends State<SecondScreen> {
                   ),
                   // incompleted 4
                   PositionedDirectional(
-                    top: 776,
-                    start: 205,
+                    top: 231.3,
+                    start: 67,
                     child: SizedBox(
                         width: 55.666666666666664,
-                        height: 5.666666666666667,
+                        height: 10,
                         child: Text("tamamlanmadı",
                             style: const TextStyle(
                                 color: const Color(0xffff0000),
@@ -191,11 +231,11 @@ class _SecondScreenState extends State<SecondScreen> {
                   ),
                   // incompleted 2
                   PositionedDirectional(
-                    top: 596,
-                    start: 201,
+                    top: 258.7,
+                    start: 67,
                     child: SizedBox(
                         width: 55.666666666666664,
-                        height: 5.666666666666667,
+                        height: 10,
                         child: Text("tamamlanmadı",
                             style: const TextStyle(
                                 color: const Color(0xffff0000),
