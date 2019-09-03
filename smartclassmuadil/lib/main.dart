@@ -1,6 +1,10 @@
-import 'package:fix/duyurular.dart';
+import 'package:fix/attendanceinfo.dart';
+import 'package:fix/dersprogrami.dart';
+import 'package:fix/Announcements.dart';
 import 'package:fix/evodevleri.dart';
 import 'package:fix/feedbackbox.dart';
+import 'package:fix/Grades.dart';
+import 'package:fix/meals.dart';
 import 'package:flutter/material.dart';
 import 'package:fix/HomePage.dart';
 import 'assets.dart';
@@ -21,11 +25,16 @@ class MyApp extends StatelessWidget {
           '/second': (context) => SecondScreen(),
           '/feedback': (context) => FeedbackBox(),
           '/homeworks': (context) => Homeworks(),
+          '/dersprogrami': (context) => Dersprogrami(),
+          '/attendance': (context) => Attendance(),
+          '/meals': (context) => Meals(),
+          '/grades': (context) => Grades(),
           '/announcements': (context) => Announcements(),
         }
     );
   }
 }
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);

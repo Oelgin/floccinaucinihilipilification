@@ -149,7 +149,7 @@ bool completion4 = false;
                     child: IconButton(
                       icon: Icon(Icons.announcement),
                       onPressed: () {
-                        print("Announcements");
+                        Navigator.pushReplacementNamed(context, '/announcements');
                       },
                     ),
                   ),
@@ -160,7 +160,7 @@ bool completion4 = false;
                     child: IconButton(
                       icon: Icon(Icons.border_color),
                       onPressed: () {
-                        print("Homework");
+                        Navigator.pushReplacementNamed(context, '/homeworks');
                       },
                     ),
                   ),
@@ -171,7 +171,7 @@ bool completion4 = false;
                     child: IconButton(
                       icon: Icon(Icons.restaurant_menu),
                       onPressed: () {
-                        print("Meal List");
+                        Navigator.pushReplacementNamed(context, '/meals');
                       },
                     ),
                   ),
@@ -182,7 +182,7 @@ bool completion4 = false;
                     child: IconButton(
                       icon: Icon(Icons.spellcheck),
                       onPressed: () {
-                        print("Attendance");
+                        Navigator.pushReplacementNamed(context, '/attendance');
                       },
                     ),
                   ),
@@ -193,7 +193,7 @@ bool completion4 = false;
                     child: IconButton(
                       icon: Icon(Icons.calendar_today),
                       onPressed: () {
-                        print("Calendar");
+                        Navigator.pushReplacementNamed(context, '/dersprogrami');
                       },
                     ),
                   ),
@@ -206,7 +206,7 @@ bool completion4 = false;
                     child: IconButton(
                       icon: Icon(Icons.more_horiz),
                       onPressed: () {
-                        print("more");
+                        Navigator.pushReplacementNamed(context, '/homeworks');
                       },
                     ),
                   ),
@@ -219,7 +219,7 @@ bool completion4 = false;
                     child: IconButton(
                       icon: Icon(Icons.more_horiz),
                       onPressed: () {
-                        print("more");
+                        Navigator.pushReplacementNamed(context, '/announcements');
                       },
                     ),
                   ),
@@ -232,7 +232,7 @@ bool completion4 = false;
                     child: IconButton(
                       icon: Icon(Icons.more_horiz),
                       onPressed: () {
-                        print("more");
+                        Navigator.pushReplacementNamed(context, '/grades');
                       },
                     ),
                   ),
@@ -245,7 +245,7 @@ bool completion4 = false;
                     child: IconButton(
                       icon: Icon(Icons.more_horiz),
                       onPressed: () {
-                        print("more");
+                        Navigator.pushReplacementNamed(context, '/meals');
                       },
                     ),
                   ),
@@ -258,7 +258,7 @@ bool completion4 = false;
                     child: IconButton(
                       icon: Icon(Icons.more_horiz),
                       onPressed: () {
-                        print("more");
+                        Navigator.pushReplacementNamed(context, '/dersprogrami');
                       },
                     ),
                   ),
@@ -271,7 +271,7 @@ bool completion4 = false;
                     child: IconButton(
                       icon: Icon(Icons.more_horiz),
                       onPressed: () {
-                        print("more");
+                        Navigator.pushReplacementNamed(context, '/attendance');
                       },
                     ),
                   ),
@@ -547,6 +547,28 @@ bool completion4 = false;
                         },
                       ),
                       ListTile(
+                        leading: new Icon(Icons.spellcheck),
+                        title: Text('Attendance Info',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/attendance');
+                        },
+                      ),
+                      ListTile(
+                        leading: new Icon(Icons.restaurant),
+                        title: Text('Meals',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/meals');
+                        },
+                      ),
+                      ListTile(
                         leading: new Icon(Icons.cancel),
                         title: Text('Sign Out',
                             style: TextStyle(
@@ -558,16 +580,38 @@ bool completion4 = false;
                         },
                       ),
                       ListTile(
+                        leading: new Icon(Icons.book),
+                        title: Text('Grades',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/grades');
+                        },
+                      ),   
+                      ListTile(
                         leading: new Icon(Icons.announcement),
                         title: Text('Announcements',
-                          style: TextStyle(
-                                fontFamily: "Futura",
-                                fontStyle: FontStyle.normal,
-                           )),
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
                         onTap: () {
-                        Navigator.pushReplacementNamed(context, '/announcements');
-                      },
-                    ),
+                          Navigator.pushReplacementNamed(context, '/announcements');
+                        },
+                      ),   
+                      ListTile(
+                        leading: new Icon(Icons.calendar_today),
+                        title: Text('Classes',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/dersprogrami');
+                        },
+                      ),
                     ],
                   ),
                 ))));

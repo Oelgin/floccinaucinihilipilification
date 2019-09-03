@@ -10,19 +10,19 @@ import 'main.dart';
 final titleCont = new TextEditingController();
 final feedbackCont = new TextEditingController();
 
-class Announcements extends StatefulWidget {
+class Attendance extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _Announcements();
+    return _Attendance();
   }
 }
 
-class _Announcements extends State<Announcements> {
+class _Attendance extends State<Attendance> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text("Announcements",
+            title: Text("Attendance",
                 style: TextStyle(
                   fontFamily: "Futura",
                   fontStyle: FontStyle.normal,
@@ -37,7 +37,7 @@ class _Announcements extends State<Announcements> {
               ),
             ]),
         body: SingleChildScrollView(
-          child: Container(
+            child: Container(
                 width: 414,
                 height: 736,
               decoration: new BoxDecoration(
@@ -47,14 +47,12 @@ class _Announcements extends State<Announcements> {
                 ),
               ),
                 child: Stack(children: [
-              Positioned( 
-                top: 50 ,
-                left: 28.7,
-                width: 356.6666666666667,
-                height: 141.66666666666666,
-                child: AnnouncementAsset(),
-              ),  // link
-        ]))),
+                  // link
+                  PositionedDirectional(
+                    top: 20,
+                    start: 30,
+                    child: AttendanceInfoAsset())])),
+        ),
         drawer: SizedBox(
             width: 250,
             child: Theme(
@@ -83,6 +81,39 @@ class _Announcements extends State<Announcements> {
                                 ),
                               ))),
                       ListTile(
+                        leading: new Icon(Icons.calendar_today),
+                        title: Text('Classes',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/dersprogrami');
+                        },
+                      ),
+                      ListTile(
+                        leading: new Icon(Icons.book),
+                        title: Text('Grades',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/grades');
+                        },
+                      ),
+                      ListTile(
+                        leading: new Icon(Icons.announcement),
+                        title: Text('Announcements',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/announcements');
+                        },
+                      ),   
+                      ListTile(
                         leading: new Icon(Icons.border_color),
                         title: Text('Homeworks',
                             style: TextStyle(
@@ -93,6 +124,28 @@ class _Announcements extends State<Announcements> {
                           Navigator.pushReplacementNamed(context, '/homeworks');
                         },
                       ),
+                      ListTile(
+                        leading: new Icon(Icons.add_comment),
+                        title: Text('Feedback Box',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/feedback');
+                        },
+                      ),
+                      ListTile(
+                        leading: new Icon(Icons.restaurant),
+                        title: Text('Meals',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/meals');
+                        },
+                      ),                                       
                       ListTile(
                         leading: new Icon(Icons.arrow_back),
                         title: Text('Go back',
