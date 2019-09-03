@@ -377,14 +377,14 @@ bool completion4 = false;
                                 ),
                               ))),
                       ListTile(
-                        leading: new Icon(Icons.border_color),
-                        title: Text('Homeworks',
+                        leading: new Icon(Icons.add_comment),
+                        title: Text('Feedback Box',
                             style: TextStyle(
                               fontFamily: "Futura",
                               fontStyle: FontStyle.normal,
                             )),
                         onTap: () {
-                          Navigator.pushReplacementNamed(context, '/homeworks');
+                          Navigator.pushReplacementNamed(context, '/feedback');
                         },
                       ),
                       ListTile(
@@ -405,8 +405,53 @@ bool completion4 = false;
                               fontFamily: "Futura",
                               fontStyle: FontStyle.normal,
                             )),
+                            
                         onTap: () {
                           Navigator.pushReplacementNamed(context, '/home');
+                        },
+                      ),
+                      ListTile(
+                        leading: new Icon(Icons.restaurant),
+                        title: Text('Meals',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/meals');
+                        },
+                      ),
+                      ListTile(
+                        leading: new Icon(Icons.spellcheck),
+                        title: Text('Attendance Info',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/attendance');
+                        },
+                      ),
+                      ListTile(
+                        leading: new Icon(Icons.book),
+                        title: Text('Grades',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/grades');
+                        },
+                      ),      
+                      ListTile(
+                        leading: new Icon(Icons.calendar_today),
+                        title: Text('Classes',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/dersprogrami');
                         },
                       ),
                     ],
