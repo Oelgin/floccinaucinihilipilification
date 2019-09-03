@@ -44,15 +44,15 @@ class _SecondScreenState extends State<SecondScreen> {
                   Positioned(
                     top: 608.3,
                     left: 32.3,
-                    width: 353.6666666666667, 
+                    width: 353.6666666666667,
                     height: 283.7,
-                    child: MealInfoAsset(),   
+                    child: MealInfoAsset(),
                   ),
                   // classesinfo
                   Positioned(
                     top: 918,
                     left: 31,
-                    width: 356.6666666666667, 
+                    width: 356.6666666666667,
                     height: 207,
                     child: ClassesInfoAsset(),
                   ),
@@ -60,7 +60,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   Positioned(
                     top: 1125,
                     left: 31.3,
-                    width: 356.6666666666667, 
+                    width: 356.6666666666667,
                     height: 189,
                     child: AttendanceInfoAsset(),
                   ),
@@ -68,7 +68,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   Positioned(
                     top: 447.7,
                     left: 30.3,
-                    width: 356.6666666666667, 
+                    width: 356.6666666666667,
                     height: 141.66666666666666,
                     child: GradesAsset(),
                   ),
@@ -76,7 +76,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   Positioned(
                     top: 126.7,
                     left: 28.7,
-                    width: 356.6666666666667, 
+                    width: 356.6666666666667,
                     height: 141.66666666666666,
                     child: HomeWorkBoxAsset(),
                   ),
@@ -84,7 +84,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   Positioned(
                     top: 286.3,
                     left: 28.7,
-                    width: 356.6666666666667, 
+                    width: 356.6666666666667,
                     height: 141.66666666666666,
                     child: AnnouncementAsset(),
                   ),
@@ -92,7 +92,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   Positioned(
                     top: 11.3,
                     left: 68.7,
-                    width: 180.33333333333334, 
+                    width: 180.33333333333334,
                     height: 90.33333333333333,
                     child: InfoBoxAsset(),
                   ),
@@ -100,16 +100,15 @@ class _SecondScreenState extends State<SecondScreen> {
                   Positioned(
                     top: 11.7,
                     right: 27,
-                    width: 134, 
+                    width: 134,
                     height: 90,
-                    child: FastMenuAsset(
-                    ) ,
+                    child: FastMenuAsset(),
                   ),
                   // studentphoto
                   Positioned(
                     top: 11.7,
                     left: 25.7,
-                    width: 90.66666666666667, 
+                    width: 90.66666666666667,
                     height: 89.66666666666667,
                     child: StudentPhotoAsset(),
                   ),
@@ -127,59 +126,140 @@ class _SecondScreenState extends State<SecondScreen> {
                     left: 80,
                     width: 150,
                     height: 75,
-                    child: PCTextAsset(), 
+                    child: PCTextAsset(),
                   ),
-                  // fastmenu iconbuttons
+                  // announcements iconbutton
                   Positioned(
-                    top:15,
-                    right: 20,
+                    top: 30,
+                    right: 110,
                     child: IconButton(
-                    icon: Icon(Icons.access_alarm),
-                    onPressed: (){
-                      print("dsadsa");
-                    },),
-                  ),               
-                  // refresh/replcaewithicon kopya 2
-                  PositionedDirectional(
-                    top: 1340,
-                    start: 1065,
-                    child: Container(
-                        width: 26.333333333333332, height: 26.333333333333332),
+                      icon: Icon(Icons.announcement),
+                      onPressed: () {
+                        print("Announcements");
+                      },
+                    ),
                   ),
-                  // refresh/replcaewithicon kopya 5
-                  PositionedDirectional(
-                    top: 3370,
-                    start: 1065,
-                    child: Container(
-                        width: 26.333333333333332, height: 26.333333333333332),
+                  // homework iconbutton
+                  Positioned(
+                    top: 30,
+                    right: 70,
+                    child: IconButton(
+                      icon: Icon(Icons.border_color),
+                      onPressed: () {
+                        print("Homework");
+                      },
+                    ),
                   ),
-                  // refresh/replcaewithicon
-                  PositionedDirectional(
-                    top: 375,
-                    start: 1065,
-                    child: Container(
-                        width: 26.333333333333332, height: 26.333333333333332),
+                  // meal iconbutton
+                  Positioned(
+                    top: 30,
+                    right: 30,
+                    child: IconButton(
+                      icon: Icon(Icons.restaurant_menu),
+                      onPressed: () {
+                        print("Meal List");
+                      },
+                    ),
                   ),
-                  // refresh/replcaewithicon kopya
-                  PositionedDirectional(
-                    top: 853,
-                    start: 1065,
-                    child: Container(
-                        width: 26.333333333333332, height: 26.333333333333332),
+                  // add iconbutton
+                  Positioned(
+                    top: 60,
+                    right: 90,
+                    child: IconButton(
+                      icon: Icon(Icons.spellcheck),
+                      onPressed: () {
+                        print("Attendance");
+                      },
+                    ),
                   ),
-                  // refresh/replcaewithicon kopya 4
-                  PositionedDirectional(
-                    top: 2749,
-                    start: 1065,
-                    child: Container(
-                        width: 26.333333333333332, height: 26.333333333333332),
+                  // calendar iconbutton
+                  Positioned(
+                    top: 60,
+                    right: 50,
+                    child: IconButton(
+                      icon: Icon(Icons.calendar_today),
+                      onPressed: () {
+                        print("Calendar");
+                      },
+                    ),
                   ),
-                  // refresh/replcaewithicon kopya 3
-                  PositionedDirectional(
-                    top: 1818,
-                    start: 1065,
-                    child: Container(
-                        width: 26.333333333333332, height: 26.333333333333332),
+                  // more info 1
+                  Positioned(
+                    top: 119,
+                    right: 32.7,
+                    width: 26.333333333333332, 
+                    height: 26.333333333333332,
+                    child: IconButton(
+                      icon: Icon(Icons.more_horiz),
+                      onPressed: () {
+                        print("more");
+                      },
+                    ),
+                  ),
+                  // more info 2
+                  Positioned(
+                    top: 278.3,
+                    right: 32.7,
+                    width: 26.333333333333332, 
+                    height: 26.333333333333332,
+                    child: IconButton(
+                      icon: Icon(Icons.more_horiz),
+                      onPressed: () {
+                        print("more");
+                      },
+                    ),
+                  ),
+                  // more info 3
+                  Positioned(
+                    top: 440.7,
+                    right: 32.7,
+                    width: 26.333333333333332, 
+                    height: 26.333333333333332,
+                    child: IconButton(
+                      icon: Icon(Icons.more_horiz),
+                      onPressed: () {
+                        print("more");
+                      },
+                    ),
+                  ),
+                  // more info 4
+                  Positioned(
+                    top: 600,
+                    right: 32.7,
+                    width: 26.333333333333332, 
+                    height: 26.333333333333332,
+                    child: IconButton(
+                      icon: Icon(Icons.more_horiz),
+                      onPressed: () {
+                        print("more");
+                      },
+                    ),
+                  ),
+                  // more info 5
+                  Positioned(
+                    top: 910.3,
+                    right: 32.7,
+                    width: 26.333333333333332, 
+                    height: 26.333333333333332,
+                    child: IconButton(
+                      icon: Icon(Icons.more_horiz),
+                      onPressed: () {
+                        print("more");
+                      },
+                    ),
+                  ),
+                  // more info 6
+                  Positioned(
+                    top: 1118.6,
+                    right: 32.7,
+                    width: 26.333333333333332, 
+                    height: 26.333333333333332,
+                    child: IconButton(
+                      icon: Icon(Icons.more_horiz),
+                      onPressed: () {
+                        print("more");
+                      },
+                    ),
                   ),
                   // incompleted 3
                   PositionedDirectional(
