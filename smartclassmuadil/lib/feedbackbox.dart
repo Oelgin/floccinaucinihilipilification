@@ -2,8 +2,12 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-
+import 'package:mailer/mailer.dart';
+import 'package:mailer/smtp_server.dart';
 import 'main.dart';
+
+final titleCont = new TextEditingController();
+final feedbackCont = new TextEditingController();
 
 class FeedbackBox extends StatefulWidget {
   @override
@@ -89,25 +93,26 @@ class _FeedbackBoxState extends State<FeedbackBox> {
                         width: 316,
                         height: 300,
                         child: TextField(
-                         maxLength: 38*8,
-                         maxLines: 8,
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "write",
-                            hintStyle: const TextStyle(
+                            controller: feedbackCont,
+                            maxLength: 38 * 8,
+                            maxLines: 8,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "write",
+                              hintStyle: const TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: "Futura",
+                                  fontStyle: FontStyle.normal,
+                                  fontSize: 17.5),
+                            ),
+                            style: const TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.w500,
                                 fontFamily: "Futura",
                                 fontStyle: FontStyle.normal,
                                 fontSize: 17.5),
-                          ),
-                          style: const TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: "Futura",
-                              fontStyle: FontStyle.normal,
-                              fontSize: 17.5),
-                          textAlign: TextAlign.left)),
+                            textAlign: TextAlign.left)),
                   ),
                   // Rectangle 4
                   PositionedDirectional(
@@ -144,48 +149,50 @@ class _FeedbackBoxState extends State<FeedbackBox> {
                         width: 238,
                         height: 23,
                         child: TextField(
-                         maxLength: 25,
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "write",
-                            hintStyle: const TextStyle(
+                            controller: titleCont,
+                            maxLines: 1,
+                            maxLength: 25,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "write",
+                              hintStyle: const TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: "Futura",
+                                  fontStyle: FontStyle.normal,
+                                  fontSize: 17.5),
+                            ),
+                            style: const TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.w500,
                                 fontFamily: "Futura",
                                 fontStyle: FontStyle.normal,
                                 fontSize: 17.5),
-                          ),
-                          style: const TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: "Futura",
-                              fontStyle: FontStyle.normal,
-                              fontSize: 17.5),
-                          textAlign: TextAlign.left)),
+                            textAlign: TextAlign.left)),
                   ),
                   // Rectangle 5
                   PositionedDirectional(
                     top: 399,
                     start: 236,
                     child: ButtonTheme(
-                      minWidth: 148,
-                      height: 36,
-              
-                      child: RaisedButton(
-                        onPressed: () {
+                        minWidth: 148,
+                        height: 36,
+                        child: RaisedButton(
+                          onPressed: () {
+                            sendMail();
                           },
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(27)),),
-                            
-                        color: const Color(0xff15a0de),
-                        child: Text("Send",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                            )),
-                      )),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(27)),
+                          ),
+                          color: const Color(0xff15a0de),
+                          child: Text("Send",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                              )),
+                        )),
                   ),
                   // Send
-                  
                 ]))),
         drawer: SizedBox(
             width: 250,
@@ -240,4 +247,20 @@ class _FeedbackBoxState extends State<FeedbackBox> {
                   ),
                 ))));
   }
+}
+
+void sendMail() async {
+  String username = 'zameproject@gmail.com';
+  String password = 'zame123123';
+  final smtpServer = gmail(username, password);
+  final message = Message()
+    ..from = Address(username, 'Feedback/Powerclass')
+    ..recipients.add('destination@example.com')
+    ..ccRecipients.addAll(['hari@my.aci.k12.tr', 'mukalin33@gmail.com'])
+    ..bccRecipients.add(Address('hari@my.aci.k12.tr'))
+    ..subject = 'Feedback/Powerclass :: 😀 :: ${DateTime.now()}'
+    ..text = '${titleCont.text}\n${feedbackCont.text}';
+  final sendReport = await send(message, smtpServer);
+  var connection = PersistentConnection(smtpServer);
+  await connection.send(message);
 }
