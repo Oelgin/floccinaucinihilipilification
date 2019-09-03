@@ -143,16 +143,18 @@ class _FeedbackBoxState extends State<FeedbackBox> {
                   ),
                   // asdkjasdakldsasdasdads
                   PositionedDirectional(
-                    top: 103,
+                    top: 83,
                     start: 95,
                     child: SizedBox(
                         width: 238,
                         height: 23,
                         child: TextField(
+                          
                             controller: titleCont,
-                            maxLines: 1,
                             maxLength: 25,
+                            maxLines: 1,
                             decoration: InputDecoration(
+                              counterText: "",
                               border: InputBorder.none,
                               hintText: "write",
                               hintStyle: const TextStyle(
@@ -260,7 +262,11 @@ void sendMail() async {
     ..bccRecipients.add(Address('hari@my.aci.k12.tr'))
     ..subject = 'Feedback/Powerclass :: 😀 :: ${DateTime.now()}'
     ..text = '${titleCont.text}\n${feedbackCont.text}';
+    titleCont.clear();
+  feedbackCont.clear();
   final sendReport = await send(message, smtpServer);
   var connection = PersistentConnection(smtpServer);
   await connection.send(message);
+  titleCont.clear();
+  feedbackCont.clear();
 }
