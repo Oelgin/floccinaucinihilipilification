@@ -186,7 +186,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   // more info 1
                   Positioned(
                     top: 119,
-                    right: 32.7,
+                    right: 35,
                     width: 26.333333333333332, 
                     height: 26.333333333333332,
                     child: IconButton(
@@ -199,7 +199,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   // more info 2
                   Positioned(
                     top: 278.3,
-                    right: 32.7,
+                    right: 35,
                     width: 26.333333333333332, 
                     height: 26.333333333333332,
                     child: IconButton(
@@ -212,7 +212,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   // more info 3
                   Positioned(
                     top: 440.7,
-                    right: 32.7,
+                    right: 35,
                     width: 26.333333333333332, 
                     height: 26.333333333333332,
                     child: IconButton(
@@ -225,7 +225,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   // more info 4
                   Positioned(
                     top: 600,
-                    right: 32.7,
+                    right: 35,
                     width: 26.333333333333332, 
                     height: 26.333333333333332,
                     child: IconButton(
@@ -238,7 +238,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   // more info 5
                   Positioned(
                     top: 910.3,
-                    right: 32.7,
+                    right: 35,
                     width: 26.333333333333332, 
                     height: 26.333333333333332,
                     child: IconButton(
@@ -251,7 +251,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   // more info 6
                   Positioned(
                     top: 1118.6,
-                    right: 32.7,
+                    right: 35,
                     width: 26.333333333333332, 
                     height: 26.333333333333332,
                     child: IconButton(
