@@ -1,3 +1,4 @@
+import 'package:fix/feedbackbox.dart';
 import 'package:flutter/material.dart';
 import 'package:fix/HomePage.dart';
 import 'assets.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
           '/home': (context) => MyHomePage(),
           '/second': (context) => SecondScreen(),
+          '/feedback': (context) => FeedbackBox(),
 
         }
     );
@@ -28,8 +30,8 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
-const String username = "kcankaya";
-const String password = "kaan123kaan";
+const String username = "a";
+const String password = "b";
 
 class _MyHomePageState extends State<MyHomePage> {
     var _opacity = 0.0;

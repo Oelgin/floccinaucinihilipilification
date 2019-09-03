@@ -241,7 +241,7 @@ class _SecondScreenState extends State<SecondScreen> {
                               fontStyle: FontStyle.normal,
                             )),
                         onTap: () {
-                          Navigator.pushReplacementNamed(context, '/second');
+                          Navigator.pushReplacementNamed(context, '/feedback');
                         },
                       ),
                       ListTile(
