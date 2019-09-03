@@ -255,6 +255,17 @@ class _FeedbackBoxState extends State<FeedbackBox> {
                           Navigator.pushReplacementNamed(context, '/home');
                         },
                       ),
+                      ListTile(
+                        leading: new Icon(Icons.announcement),
+                        title: Text('Announcements',
+                          style: TextStyle(
+                                fontFamily: "Futura",
+                                fontStyle: FontStyle.normal,
+                           )),
+                        onTap: () {
+                        Navigator.pushReplacementNamed(context, '/announcements');
+                      },
+                    ),
                     ],
                   ),
                 ))));

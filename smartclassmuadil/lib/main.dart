@@ -1,3 +1,4 @@
+import 'package:fix/duyurular.dart';
 import 'package:fix/evodevleri.dart';
 import 'package:fix/feedbackbox.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           '/second': (context) => SecondScreen(),
           '/feedback': (context) => FeedbackBox(),
           '/homeworks': (context) => Homeworks(),
-
+          '/announcements': (context) => Announcements(),
         }
     );
   }
