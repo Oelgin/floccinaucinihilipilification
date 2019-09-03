@@ -60,6 +60,16 @@ flutter:
    - images/studentphoto.png
    - images/infobox.png
    - images/text.png
+   - images/bildirim.png
+   - images/doku.png
+   - images/infopart.png
+   - images/link.png
+   - images/people.png
+   - images/turkey.png
+   - images/world.png
+   - images/yerand.png
+   - images/yerlesmegelisim.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

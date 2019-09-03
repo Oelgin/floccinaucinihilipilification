@@ -215,3 +215,106 @@ class StudentPhotoAsset extends StatelessWidget {
     );
   }
 }
+//Asset 21
+class BildirimAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/bildirim.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
+//Asset 22
+class DokuAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/doku.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
+//Asset 23
+class InfoPartAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/infopart.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
+//Asset 24
+class LinkAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/link.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
+//Asset 25
+class PeopleAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/people.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
+//Asset 26
+class TurkeyAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/turkey.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
+
+//Asset 27
+class WorldAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/world.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
+//Asset 28
+class YerandAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/yerand.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
+//Asset 29
+class YerlesmeGelisimAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/yerlesmegelisim.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
+
+
+

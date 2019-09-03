@@ -21,7 +21,7 @@ class _FeedbackBoxState extends State<FeedbackBox> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text("Home",
+            title: Text("Feedback Box",
                 style: TextStyle(
                   fontFamily: "Futura",
                   fontStyle: FontStyle.normal,
@@ -223,6 +223,16 @@ class _FeedbackBoxState extends State<FeedbackBox> {
                                   fontSize: 20,
                                 ),
                               ))),
+                      ListTile(
+                        leading: new Icon(Icons.border_color),
+                        title: Text('Homeworks',
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                              fontStyle: FontStyle.normal,
+                            )),
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/homeworks');
+                        }),        
                       ListTile(
                         leading: new Icon(Icons.arrow_back),
                         title: Text('Go back',
