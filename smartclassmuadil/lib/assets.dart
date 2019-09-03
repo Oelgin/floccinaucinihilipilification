@@ -315,6 +315,17 @@ class YerlesmeGelisimAsset extends StatelessWidget {
     );
   }
 }
+//Asset 30
+class AkkadeAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/akkade.png');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
 
 
 

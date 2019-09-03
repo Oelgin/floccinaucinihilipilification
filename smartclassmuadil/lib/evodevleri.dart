@@ -341,13 +341,6 @@ bool completion4 = false;
                       onTap: (){},
                     child: TurkeyAsset()),
                   ),
-                  // bildirim
-                  // PositionedDirectional(
-                  //   top: 1861,
-                  //   start: 579,
-                  //   child: Container(
-                  //       width: 34.333333333333336, height: 3.6666666666666665),
-                  // )
                 ]))),
         drawer: SizedBox(
             width: 250,

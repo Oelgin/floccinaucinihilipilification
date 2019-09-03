@@ -47,11 +47,20 @@ class _Grades extends State<Grades> {
                 ),
               ),
                 child: Stack(children: [
-                  // link
+                  // l
                   PositionedDirectional(
                     top: 20,
                     start: 30,
-                    child: GradesAsset())])),
+                    child: GradesAsset()),
+                    Positioned(
+                    top: 75.7,
+                    left: 33,
+                    width: 350.3333333333333,
+                    height: 47.333333333333336,
+                    child: AkkadeAsset(),
+                ),
+                    ])
+                    ),
         ),
         drawer: SizedBox(
             width: 250,

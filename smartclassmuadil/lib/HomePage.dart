@@ -86,6 +86,13 @@ bool completion4 = false;
                     height: 141.66666666666666,
                     child: GradesAsset(),
                   ),
+                  Positioned(
+                    top: 503.3,
+                    left: 33,
+                    width: 350.3333333333333,
+                    height: 47.333333333333336,
+                    child: AkkadeAsset(),
+                ),
                   // homeworkbox
                   Positioned(
                     top: 126.7,
@@ -164,6 +171,7 @@ bool completion4 = false;
                       },
                     ),
                   ),
+                  
                   // meal iconbutton
                   Positioned(
                     top: 30,

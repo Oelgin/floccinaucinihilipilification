@@ -69,6 +69,7 @@ flutter:
    - images/world.png
    - images/yerand.png
    - images/yerlesmegelisim.png
+   - images/akkade.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
