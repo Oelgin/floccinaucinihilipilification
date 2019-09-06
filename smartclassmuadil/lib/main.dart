@@ -42,8 +42,8 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
-const String username = "mukalin22";
-const String password = "asdfg";
+const String username = "a";
+const String password = "b";
 
 class _MyHomePageState extends State<MyHomePage> {
     var _opacity = 0.0;
